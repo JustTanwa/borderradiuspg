@@ -35,7 +35,7 @@ main .main-box {
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(80deg, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
+  background: linear-gradient(100deg, #9AE66E 0%, #FEE440 100%);
 }
 .container .blob .hor-top-left {
   position: absolute;
@@ -51,7 +51,7 @@ main .main-box {
   cursor: pointer;
 }
 .container .blob .hor-top-left input[type=range]::-webkit-slider-runnable-track {
-  background: #053a5f;
+  background: #f7aab3;
   height: 6px;
   border-radius: 8px;
 }
@@ -59,7 +59,7 @@ main .main-box {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -3px;
-  background-color: #5cd5eb;
+  background-color: #eb1d36;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -70,6 +70,9 @@ main .main-box {
   width: 100%;
   margin: 0;
 }
+.container .blob .hor-top-right .topright {
+  direction: rtl;
+}
 .container .blob .hor-top-right input[type=range] {
   margin: 0;
   width: 100%;
@@ -78,7 +81,7 @@ main .main-box {
   cursor: pointer;
 }
 .container .blob .hor-top-right input[type=range]::-webkit-slider-runnable-track {
-  background: #053a5f;
+  background: #41bf72;
   height: 6px;
   border-radius: 8px;
 }
@@ -86,7 +89,7 @@ main .main-box {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -3px;
-  background-color: #5cd5eb;
+  background-color: #1a4d2e;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -97,6 +100,9 @@ main .main-box {
   width: 100%;
   margin: 0;
 }
+.container .blob .hor-bottom-right .botright {
+  direction: rtl;
+}
 .container .blob .hor-bottom-right input[type=range] {
   margin: 0;
   width: 100%;
@@ -105,7 +111,7 @@ main .main-box {
   cursor: pointer;
 }
 .container .blob .hor-bottom-right input[type=range]::-webkit-slider-runnable-track {
-  background: #053a5f;
+  background: #19e0ff;
   height: 6px;
   border-radius: 8px;
 }
@@ -113,7 +119,7 @@ main .main-box {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -3px;
-  background-color: #5cd5eb;
+  background-color: #006e7f;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -132,7 +138,7 @@ main .main-box {
   cursor: pointer;
 }
 .container .blob .hor-bottom-left input[type=range]::-webkit-slider-runnable-track {
-  background: #053a5f;
+  background: #fcb492;
   height: 6px;
   border-radius: 8px;
 }
@@ -140,7 +146,7 @@ main .main-box {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -3px;
-  background-color: #5cd5eb;
+  background-color: #ee5007;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -161,7 +167,7 @@ main .main-box {
   cursor: pointer;
 }
 .container .blob .ver-top-left input[type=range]::-webkit-slider-runnable-track {
-  background: #053a5f;
+  background: #f7aab3;
   height: 6px;
   border-radius: 8px;
 }
@@ -169,7 +175,7 @@ main .main-box {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -3px;
-  background-color: #5cd5eb;
+  background-color: #eb1d36;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -177,7 +183,7 @@ main .main-box {
 .container .blob .ver-top-right {
   position: absolute;
   top: 50%;
-  right: -20px;
+  right: -40px;
   width: 100%;
   margin: 0;
   transform: translate(50%, -50%) rotate(90deg);
@@ -190,7 +196,7 @@ main .main-box {
   cursor: pointer;
 }
 .container .blob .ver-top-right input[type=range]::-webkit-slider-runnable-track {
-  background: #053a5f;
+  background: #41bf72;
   height: 6px;
   border-radius: 8px;
 }
@@ -198,7 +204,7 @@ main .main-box {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -3px;
-  background-color: #5cd5eb;
+  background-color: #1a4d2e;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -211,6 +217,9 @@ main .main-box {
   margin: 0;
   transform: translate(-50%, -50%) rotate(90deg);
 }
+.container .blob .ver-bottom-left .botleft {
+  direction: rtl;
+}
 .container .blob .ver-bottom-left input[type=range] {
   margin: 0;
   width: 100%;
@@ -219,7 +228,7 @@ main .main-box {
   cursor: pointer;
 }
 .container .blob .ver-bottom-left input[type=range]::-webkit-slider-runnable-track {
-  background: #053a5f;
+  background: #fcb492;
   height: 6px;
   border-radius: 8px;
 }
@@ -227,7 +236,7 @@ main .main-box {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -3px;
-  background-color: #5cd5eb;
+  background-color: #ee5007;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -235,10 +244,13 @@ main .main-box {
 .container .blob .ver-bottom-right {
   position: absolute;
   top: 50%;
-  right: -40px;
+  right: -20px;
   width: 100%;
   margin: 0;
   transform: translate(50%, -50%) rotate(90deg);
+}
+.container .blob .ver-bottom-right .botright {
+  direction: rtl;
 }
 .container .blob .ver-bottom-right input[type=range] {
   margin: 0;
@@ -248,7 +260,7 @@ main .main-box {
   cursor: pointer;
 }
 .container .blob .ver-bottom-right input[type=range]::-webkit-slider-runnable-track {
-  background: #053a5f;
+  background: #19e0ff;
   height: 6px;
   border-radius: 8px;
 }
@@ -256,7 +268,7 @@ main .main-box {
   -webkit-appearance: none;
   appearance: none;
   margin-top: -3px;
-  background-color: #5cd5eb;
+  background-color: #006e7f;
   height: 12px;
   width: 12px;
   border-radius: 50%;

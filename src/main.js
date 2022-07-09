@@ -9,9 +9,10 @@ const points = {
   v4: 'v4_slider',
 };
 const values = document.querySelectorAll('.value>span');
-const [hLeft, hRight, hlBottom, hrBottom, vLeft, vRight, vlBottom, vrBottom] =
+const [hLeft, hRight, hrBottom, hlBottom, vLeft, vRight, vrBottom, vlBottom] =
   values;
-const sliders = document.querySelectorAll('input[type=range]');
+
+const blob = document.querySelector('.blob');
 
 const container = document.querySelector('.container');
 container.addEventListener('input', (e) => {
@@ -43,4 +44,6 @@ container.addEventListener('input', (e) => {
     default:
       break;
   }
+
+  blob.style.borderRadius = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
 });
