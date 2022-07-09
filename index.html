@@ -1,11 +1,117 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A front-end developer tool to help generate blob shapes using CSS border-radius."
+    />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Border Radius Playground</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>Border Radius Playground</h1>
+    <main>
+      <section class="code-snippet">
+        <p class="value">Horizontal left: <span>0</span></p>
+        <p class="value">Horizontal right: <span>0</span></p>
+        <p class="value">Horizontal right (bottom): <span>0</span></p>
+        <p class="value">Horizontal left (bottom): <span>0</span></p>
+        <p class="value">Verticle left: <span>0</span></p>
+        <p class="value">Verticle right: <span>0</span></p>
+        <p class="value">Verticle right (bottom): <span>0</span></p>
+        <p class="value">Verticle left (bottom): <span>0</span></p>
+      </section>
+      <section class="main-box">
+        <div class="container">
+          <div class="blob">
+            <div class="hor-top-left">
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                class="topleft"
+                id="h1_slider"
+              />
+            </div>
+            <div class="hor-top-right">
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                class="topright"
+                id="h2_slider"
+              />
+            </div>
+            <div class="hor-bottom-left">
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                class="botleft"
+                id="h3_slider"
+              />
+            </div>
+            <div class="hor-bottom-right">
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                class="botright"
+                id="h4_slider"
+              />
+            </div>
+            <div class="ver-top-left">
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                class="topleft"
+                id="v1_slider"
+              />
+            </div>
+            <div class="ver-top-right">
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                class="topright"
+                id="v2_slider"
+              />
+            </div>
+
+            <div class="ver-bottom-left">
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                class="botleft"
+                id="v3_slider"
+              />
+            </div>
+            <div class="ver-bottom-right">
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                class="botright"
+                id="v4_slider"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>copyright 2022 JustTanwa</footer>
+    <script src="src/main.js"></script>
+  </body>
 </html>
