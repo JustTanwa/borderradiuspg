@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 body {
+  font-family: "Rubik", serif;
+  background: #222;
+  color: #eee;
   position: relative;
   padding: 0;
   margin: 0;
@@ -29,13 +33,13 @@ main .main-box {
 .container {
   width: 300px;
   height: 300px;
-  border: 1px dashed black;
+  border: 1px dashed #fff;
 }
 .container .blob {
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(100deg, #9AE66E 0%, #FEE440 100%);
+  background: linear-gradient(100deg, #9ae66e 0%, #fee440 100%);
 }
 .container .blob .hor-top-left {
   position: absolute;
@@ -272,4 +276,27 @@ main .main-box {
   height: 12px;
   width: 12px;
   border-radius: 50%;
+}
+
+footer {
+  width: 100%;
+  background-color: #e59934;
+  color: #222;
+  text-align: center;
+}
+
+.title {
+  color: #eee;
+}
+
+.value {
+  font-size: 0.75em;
+}
+
+.css-code {
+  border: 1px solid #fff;
+  background: #fff;
+  color: black;
+  padding: 10px;
+  cursor: default;
 }/*# sourceMappingURL=styles.css.map */

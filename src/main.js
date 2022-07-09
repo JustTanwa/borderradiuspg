@@ -14,6 +14,10 @@ const [hLeft, hRight, hrBottom, hlBottom, vLeft, vRight, vrBottom, vlBottom] =
 
 const blob = document.querySelector('.blob');
 
+const css = document.querySelector('.css-code>span');
+
+css.textContent = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
+
 const container = document.querySelector('.container');
 container.addEventListener('input', (e) => {
   switch (e.target.id) {
@@ -46,4 +50,11 @@ container.addEventListener('input', (e) => {
   }
 
   blob.style.borderRadius = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
+  css.textContent = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
 });
+
+const copy = document.querySelector(".css-code");
+copy.onclick = () => {
+  navigator.clipboard.writeText(copy.textContent);
+}
+
