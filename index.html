@@ -7,6 +7,24 @@
       name="description"
       content="A front-end developer tool to help generate blob shapes using CSS border-radius."
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="src/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/favicon-16x16.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="src/styles.css" />
     <title>Border Radius Playground</title>
   </head>
@@ -23,7 +41,8 @@
         <p class="value">Verticle right (bottom): <span>0</span></p>
         <p class="value">Verticle left (bottom): <span>0</span></p>
         <p class="css-code">border-radius: <span></span>;</p>
-        <button type="button">Reset</button>
+        <span class="copied_tp">Copied</span>
+        <button type="button" id="reset_btn">Reset</button>
       </section>
       <section class="main-box">
         <div class="container">

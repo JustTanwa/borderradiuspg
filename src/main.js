@@ -18,6 +18,12 @@ const css = document.querySelector('.css-code>span');
 
 css.textContent = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
 
+const sliders = document.querySelectorAll('input[type=range]');
+
+function update() {
+  blob.style.borderRadius = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
+  css.textContent = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
+}
 const container = document.querySelector('.container');
 container.addEventListener('input', (e) => {
   switch (e.target.id) {
@@ -49,12 +55,34 @@ container.addEventListener('input', (e) => {
       break;
   }
 
-  blob.style.borderRadius = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
-  css.textContent = `${hLeft.textContent}px ${hRight.textContent}px ${hrBottom.textContent}px ${hlBottom.textContent}px / ${vLeft.textContent}px ${vRight.textContent}px ${vrBottom.textContent}px ${vlBottom.textContent}px`;
+  update();
 });
 
-const copy = document.querySelector(".css-code");
-copy.onclick = () => {
+const copy = document.querySelector('.css-code');
+const copied_tp = document.querySelector('.copied_tp');
+copy.onclick = (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  copied_tp.style.top = y;
+  copied_tp.style.left = x;
+  copied_tp.style.display = 'block';
+  setTimeout(() => {
+    copied_tp.style.display = 'none';
+  }, 1000);
   navigator.clipboard.writeText(copy.textContent);
-}
+};
 
+const reset = document.getElementById('reset_btn');
+reset.onclick = () => {
+  sliders.forEach((slider) => (slider.value = 0));
+  hLeft.textContent = 0;
+  hRight.textContent = 0;
+  hrBottom.textContent = 0;
+  hlBottom.textContent = 0;
+  vLeft.textContent = 0;
+  vRight.textContent = 0;
+  vrBottom.textContent = 0;
+  vlBottom.textContent = 0;
+
+  update();
+};
